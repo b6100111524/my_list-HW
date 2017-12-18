@@ -1,0 +1,34 @@
+<div class="errorbox">
+  <% if @list.errors.any? %>
+    <h2>We have some errors here !</h2>
+    <ul class="errorlist">
+      <% @list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<div class="itembox">
+  <%= form_for @list do |f| %>
+    <%= f.label :title, 'Title' %>
+    <br>
+    <%= f.text_area :title %>
+    <br>
+    <%= f.label :duedate, 'Dateline' %>
+    <br>
+    <%= f.date_select :duedate %>
+    <br>
+    <%= f.label :note, 'Note' %>
+    <br>
+    <%= f.text_area :note %>
+    <br>
+    <div class="itembox_btn">
+      <%# button 這個變數，分別在 new.html.erb & edit.html.erb 中設定 // lists_path vs :back %>
+      <%= f.submit button, class: 'btn btn-success' %>
+      <%= link_to 'HOME', lists_path, class: 'btn btn-default' %>
+    </div>
+  <% end %>
+</div>
+
+<%# %>

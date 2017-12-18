@@ -1,0 +1,203 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ 
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+@import url('https://fonts.googleapis.com/css?family=Delius+Unicase');
+
+
+// =============normal setting============
+
+* {
+  //border: solid 1px black;
+  font-family: 'Delius Unicase';
+}
+
+@font-face {
+  font-family: 'Delius Unicase';
+
+}
+
+body {
+  //背景
+  background-color: #261d1d;
+}
+
+h1 {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  font-size: 70px;
+}
+h2 {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+h3 {
+  position: relative;
+  top: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: #661d1d;
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  width: 95%;
+  font-size: 15px;
+}
+
+// ===============index page===============
+
+.listbox {
+  //首頁 長寬
+  width: 800px;
+  max-height: 1000px;
+
+  //border: solid 2px grey;
+  //border-radius: 15px;
+  background-color: #d6c7c7;                                 //背景色
+  //background: linear-gradient(to bottom, #f3ffbd, white);  //漸層
+
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 3px 3px 20px rgba(0,0,0,.5);                  //陰影
+}
+
+.underbar {
+  //標題隔線
+  width: 600px;
+  height: 5px;
+  background-color: #661d1d;
+  margin: 0 auto 30px auto;
+}
+.underbar2 {
+  //內文隔線
+  width: 500px;
+  height: 5px;
+  background-color: #661d1d;
+  margin: 0 auto 30px auto;
+}
+
+.addbtn {
+  position: absolute;
+  margin: 0px 30px;
+  left: 40px;
+}
+
+.list {
+  margin: 80px 30px;
+  max-height: 300px;
+  //拖拉軸設定
+  overflow: scroll;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+.due_date {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.s_title {
+  //show title
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.note {
+  //內容的內容
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.duedate {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.actions {
+  position: absolute;
+
+  right: 0;
+  top: 7px;
+}
+
+.itembar {
+  width: 95%;
+  height: 1.5px;
+
+  background-color: #DEE5DE;
+}
+
+// ================partial page==============
+
+.errorbox {
+  width: 400px;
+  height: 80px;
+  margin: 20px auto;
+  text-align: center;
+  //border: solid 1px #EDF4ED;
+  color: #FFDD55;
+}
+
+.errorlist {
+  list-style: none;
+  padding: 0;
+}
+
+.itembox {
+  width: 600px;
+  height: 400px;
+  background-color: #d6c7c7; 
+  box-shadow: 3px 3px 20px rgba(0,0,0,.5);
+  //border: solid 2px grey;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 22px;
+}
+
+.field_with_errors {
+  margin: -10px;
+}
+#list_title{
+//  margin: -30px;
+}
+
+
+//.input_text {
+//  text-align:center;
+//}
+
+.itembox_btn {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+
+

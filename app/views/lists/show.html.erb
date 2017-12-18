@@ -1,0 +1,16 @@
+<h3><%= Time.now.strftime("%Y/%m/%d %H:%M") %></h3>
+
+<div class="itembox">
+  <p class="duedate">Dateline : <%= @list.duedate %></p>
+  <p class="s_title"><%= @list.title %></p>
+  <div class="underbar2"></div>
+  <%= simple_format @list.note, class: 'note' %>
+  <div class="itembox_btn">
+    <%# 把編輯與刪除按鍵搬到 lists_helper.rb >> 用 helper 的方式來做按鈕的 render 並且 可把 list 物件，當成參數傳入 helper %>
+    <%= list_edit_button(@list) %>
+    <%= link_to 'HOME', lists_path, class: 'btn btn-default' %>
+  </div>
+</div>
+
+<%# %>
+

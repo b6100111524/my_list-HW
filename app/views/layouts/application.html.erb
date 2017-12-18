@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      body{
+        position: relative;
+      }
+
+      .amendmsg{
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        margin: auto;
+      }
+
+      .amendmsg p{
+        font-size: 20px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <% if flash.present? %>
+      <div class="amendmsg">
+        <p style="color: green"><%= flash[:notice] %></p>
+        <p style="color: red"><%= flash[:alert] %></p>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
