@@ -1,4 +1,4 @@
-aclass ListsController < ApplicationController
+class ListsController < ApplicationController
   # before_action :set_list, :only => [:show, :edit, :update, :destroy] #同理可自行定義私有方法 :find_list
   before_action :find_list, only: %i[show edit update destroy]          
   
